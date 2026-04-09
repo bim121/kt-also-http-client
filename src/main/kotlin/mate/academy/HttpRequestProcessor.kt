@@ -7,7 +7,7 @@ class HttpRequestProcessor(private val client: HttpClient) {
             println("Response Content: ${it.content}")
         }
 
-        return if (response.statusCode == 200) {
+        return if (response.statusCode == OK_STATUS_CODE) {
             response.also {
                 println("Processing content: ${it.content}")
             }
